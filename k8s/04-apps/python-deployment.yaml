@@ -33,5 +33,5 @@ spec:
             - name: DB_PASSWORD
               value: trainingpwd
           # TODO ejercicio 5:
-          # Revisar imagePullPolicy si trabajas con imagen importada o registry local.
-              imagePullPolicy: IfNotPresent
+          #Revisar imagePullPolicy si trabajas con imagen importada o registry loc
+          imagePullPolicy: IfNotPresent
