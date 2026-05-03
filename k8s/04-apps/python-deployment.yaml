@@ -18,7 +18,7 @@ spec:
           # Ejercicio 5:
           # Deployment es el modelo adecuado para este backend stateless,
           # aunque consuma una base de datos externa.
-          image: REPLACE_ME_BACKEND_PYTHON_IMAGE
+          image: angelatrabg/backend-python:0.0.1
           ports:
             - containerPort: 5000
           env:
@@ -34,4 +34,4 @@ spec:
               value: trainingpwd
           # TODO ejercicio 5:
           # Revisar imagePullPolicy si trabajas con imagen importada o registry local.
-          # imagePullPolicy: IfNotPresent
+              imagePullPolicy: IfNotPresent

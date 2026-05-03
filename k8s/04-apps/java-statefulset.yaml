@@ -21,9 +21,9 @@ spec:
         - name: backend-java
           # TODO ejercicio 5:
           # Sustituir por la imagen construida para la app Java.
-          image: REPLACE_ME_BACKEND_JAVA_IMAGE
+          image: angelatrabg/backend-java:0.0.1
           ports:
             - containerPort: 8080
           # TODO ejercicio 5:
           # Si usas un registry local o import de imagen en k3s, revisar imagePullPolicy.
-          # imagePullPolicy: IfNotPresent
+          imagePullPolicy: IfNotPresent
