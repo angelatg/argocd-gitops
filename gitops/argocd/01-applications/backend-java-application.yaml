@@ -10,10 +10,10 @@ spec:
     targetRevision: HEAD
     # TODO ejercicio 3:
     # Ajustar al path exacto del componente Java.
-    path: k8s/04-apps/java
+    path: k8s/04-apps
   destination:
     server: https://kubernetes.default.svc
     namespace: apps
   syncPolicy:
     syncOptions:
-      - CreateNamespace=true
+      - FailOnSharedResource=true

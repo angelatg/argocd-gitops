@@ -10,10 +10,10 @@ spec:
     targetRevision: HEAD
     # TODO ejercicio 3:
     # Ajustar al path exacto del componente webui.
-    path: k8s/04-apps/webui
+    path: k8s/04-apps
   destination:
     server: https://kubernetes.default.svc
     namespace: apps
   syncPolicy:
     syncOptions:
-      - CreateNamespace=true
+      - FailOnSharedResource=true
