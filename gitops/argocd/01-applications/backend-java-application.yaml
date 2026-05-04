@@ -16,4 +16,4 @@ spec:
     namespace: apps
   syncPolicy:
     syncOptions:
-      - FailOnSharedResource=true
+      - CreateNamespace=true
