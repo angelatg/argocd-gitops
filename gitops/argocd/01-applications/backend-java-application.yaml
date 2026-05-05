@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: backend-java
-  namespace: backjava
+  namespace: argocd
 spec:
   project: training-project
   source:

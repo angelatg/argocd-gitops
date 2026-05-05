@@ -14,14 +14,21 @@ spec:
         app: backend-python
     spec:
       containers:
-        - name: backend-python
+      - name: backend-python
           # Ejercicio 5:
           # Deployment es el modelo adecuado para este backend stateless,
           # aunque consuma una base de datos externa.
-          image: angelatrabg/backend-python:0.0.1
-          ports:
-            - containerPort: 5000
-          env:
+        image: angelatrabg/backend-python:0.0.1
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "250m"
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+          - containerPort: 5000
+        env:
             - name: DB_HOST
               value: postgres.database.svc.cluster.local
             - name: DB_PORT
@@ -32,6 +39,6 @@ spec:
               value: training
             - name: DB_PASSWORD
               value: trainingpwd
-          # TODO ejercicio 5:
-          #Revisar imagePullPolicy si trabajas con imagen importada o registry loc
-          imagePullPolicy: IfNotPresent
+        # TODO ejercicio 5:
+        #Revisar imagePullPolicy si trabajas con imagen importada o registry loc
+        imagePullPolicy: IfNotPresent

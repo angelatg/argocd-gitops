@@ -18,6 +18,13 @@ spec:
           # Ejercicio 5:
           # Sustituir por la imagen construida para la webui.
           image: angelatrabg/webui:0.0.1
+          resources:
+            requests:
+              memory: "64Mi"
+              cpu: "250m"
+            limits:
+              memory: "128Mi"
+              cpu: "500m"
           ports:
             - containerPort: 80
           # TODO ejercicio 5:

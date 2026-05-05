@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: backend-python
-  namespace: backpython
+  namespace: argocd
 spec:
   project: training-project
   source:
