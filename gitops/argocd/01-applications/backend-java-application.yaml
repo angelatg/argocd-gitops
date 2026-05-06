@@ -5,7 +5,7 @@ metadata:
   namespace: argocd
 spec:
   ignoreDifferences:
-    - group: apps
+    - group: argocd
       kind: Deployment
       jsonPointers:
       - /metadata/annotations
