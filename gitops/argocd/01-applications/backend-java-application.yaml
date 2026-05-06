@@ -20,7 +20,7 @@ spec:
     path: k8s/04-apps
   destination:
     server: https://kubernetes.default.svc
-    namespace: apps
+    namespace: apps-java
   syncPolicy:
     syncOptions:
       - CreateNamespace=true
