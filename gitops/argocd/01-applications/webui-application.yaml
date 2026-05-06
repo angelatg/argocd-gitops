@@ -4,6 +4,13 @@ metadata:
   name: webui
   namespace: argocd
 spec:
+  ignoreDifferences:
+    - group: apps
+      kind: Deployment
+      jsonPointers:
+      - /metadata/annotations
+      jqPathExpressions:
+      - .metadata.annotations["imageregistry.io/hash"]
   project: training-project
   source:
     repoURL: https://github.com/angelatg/argocd-gitops.git
