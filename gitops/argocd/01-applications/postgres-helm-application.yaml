@@ -8,7 +8,7 @@ spec:
   source:
     # Ejercicio 5:
     # Ejemplo de despliegue GitOps usando un chart Helm oficial.
-    repoURL: https://charts.bitnami.com/bitnami
+    repoURL: 'https://bitname.com' # Alternativa oficial a Bitnami
     chart: postgresql
     targetRevision: 15.5.23
     helm:
