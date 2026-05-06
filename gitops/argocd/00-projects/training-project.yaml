@@ -16,6 +16,12 @@ spec:
       server: https://kubernetes.default.svc
     - namespace: apps
       server: https://kubernetes.default.svc
+    - namespace: apps-java
+      server: https://kubernetes.default.svc
+    - namespace: apps-python
+      server: https://kubernetes.default.svc
+    - namespace: apps-webui
+      server: https://kubernetes.default.svc
   clusterResourceWhitelist:
     - group: '*'
       kind: '*'
