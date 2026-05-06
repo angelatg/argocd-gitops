@@ -4,13 +4,6 @@ metadata:
   name: webui
   namespace: argocd
 spec:
-  ignoreDifferences:
-    - group: argocd
-      kind: Deployment
-      jsonPointers:
-      - /metadata/annotations
-      jqPathExpressions:
-      - .metadata.annotations["imageregistry.io/hash"]
   project: training-project
   source:
     repoURL: https://github.com/angelatg/argocd-gitops.git
@@ -22,5 +15,8 @@ spec:
     server: https://kubernetes.default.svc
     namespace: apps
   syncPolicy:
+    automated:                # Habilita la sincronización automática
+      prune: true             # Borra recursos eliminados en Git
+      selfHeal: true          # Corrige cambios manuales fuera de Git
     syncOptions:
       - CreateNamespace=true
